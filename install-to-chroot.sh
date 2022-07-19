@@ -13,9 +13,6 @@
 DATESTAMP=`date +%Y%m%d-%H%M%S`
 NAO_CHROOT="/opt/nethack/chroot"
 # config outside of chroot
-DGL_CONFIG="/opt/nethack/dgamelaunch.conf"
-# already compiled versions of dgl and nethack
-DGL_GIT="/home/build/dgamelaunch"
 NETHACK_GIT="/home/build/AceHack"
 # the user & group from dgamelaunch config file.
 USRGRP="games:games"
@@ -57,6 +54,7 @@ chown "$USRGRP" "$NAO_CHROOT/dgldir/extrainfo-ace"
 
 echo "Making $NAO_CHROOT/$NHSUBDIR"
 mkdir -p "$NAO_CHROOT/$NHSUBDIR"
+chown "$USRGRP" "$NAO_CHROOT/$NHSUBDIR"
 
 echo "Copying AceHack playground stuff"
 cp "$NETHACK_GIT/dat/nhdat" "$NAO_CHROOT/$NHSUBDIR"
