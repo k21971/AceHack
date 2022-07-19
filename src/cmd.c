@@ -1129,11 +1129,11 @@ int final;	/* 0 => still in progress; 1 => over, survived; 2 => dead */
     /* heaven or hell modes */
 	if (heaven_or_hell_mode) {
 		if (u.ulives > 1)
-			Sprintf(buf, "%d lives", u.ulives);
+			Sprintf(buf, "%ld lives", u.ulives);
 		else if (u.ulives == 0)
 			Sprintf(buf, "no lives");
 		else
-			Sprintf(buf, "%d life", u.ulives);
+			Sprintf(buf, "%ld life", u.ulives);
 		you_have(buf);
 	}
 
@@ -1424,7 +1424,7 @@ STATIC_OVL void
 unspoilered_intrinsics()
 {
 	winid tmpwin;
-        int n;
+        int n = 0;
         menu_item* selected;
         anything any;
 

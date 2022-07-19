@@ -3330,7 +3330,7 @@ $as_echo_n "checking the appropriate location for multiplayer lockfiles... " >&6
 # sort of thing. (And even then, it fails on directory names that
 # contain spaces/tabs/newlines, on some shells, but I wouldn't expect
 # that to work anyway.)
-MPLOCKLOC=${MPLOCKLOC=`(find /var/lock /var/run /tmp -maxdepth 0 -and -writable -printf '%p/acehack\n'; echo "\${PREFIX}") | head -n 1`}
+MPLOCKLOC=${MPLOCKLOC=`(find /opt/nethack/chroot -maxdepth 0 -and -writable -printf '%p/acehack\n'; echo "\${PREFIX}") | head -n 1`}
 { $as_echo "$as_me:${as_lineno-$LINENO}: result: ${MPLOCKLOC}" >&5
 $as_echo "${MPLOCKLOC}" >&6; }
 

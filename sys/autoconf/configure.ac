@@ -56,7 +56,7 @@ AC_MSG_CHECKING([the appropriate location for multiplayer lockfiles])
 # sort of thing. (And even then, it fails on directory names that
 # contain spaces/tabs/newlines, on some shells, but I wouldn't expect
 # that to work anyway.)
-MPLOCKLOC=${MPLOCKLOC=`(find /var/lock /var/run /tmp -maxdepth 0 -and -writable -printf '%p/acehack\n'; echo "\${PREFIX}") | head -n 1`}
+MPLOCKLOC=${MPLOCKLOC=`(find /opt/nethack/chroot -maxdepth 0 -and -writable -printf '%p/acehack\n'; echo "\${PREFIX}") | head -n 1`}
 AC_MSG_RESULT(${MPLOCKLOC})
 AC_DEFINE_UNQUOTED(MPLOCKLOC, "${MPLOCKLOC}", [Define to an appropriate directory for multiplayer lockfiles.])
 AC_SUBST(MPLOCKLOC)
