@@ -64,13 +64,13 @@ dat/Makefile
 dat/quest_levs
 dat/spec_levs
 dat/vaults.dat
-doc/Guidebook
+doc/Guidebook*
 doc/Makefile
 include/autoconf.h
 include/vis_tab.h
 include/win32api.h
 src/Sysunix
-src/nethack
+src/acehack
 src/vis_tab.c
 src/config.h-t
 src/hack.h-t
