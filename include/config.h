@@ -228,7 +228,8 @@
  * otherwise it will be the current directory.
  */
 # ifndef HACKDIR
-#  define HACKDIR "/usr/games/lib/acehackdir"
+#  define HACKDIR "/acehack"
+/*#  define HACKDIR "/usr/games/lib/acehackdir"*/
 # endif
 
 /*
