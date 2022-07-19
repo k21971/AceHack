@@ -228,7 +228,7 @@
  * otherwise it will be the current directory.
  */
 # ifndef HACKDIR
-#  define HACKDIR "'you need to run AceHack via the shelldir to set directories correctly'"
+#  define HACKDIR "/usr/games/lib/acehackdir"
 # endif
 
 /*

@@ -49,8 +49,8 @@ CXX=g++
 
 # files for a straight tty port using no native windowing system
 WINTTYSRC = $(srcdir)/../win/tty/getline.c $(srcdir)/../win/tty/termcap.c $(srcdir)/../win/tty/topl.c \
-	$(srcdir)/../win/tty/wintty.c 
-WINTTYOBJ = getline.o termcap.o topl.o wintty.o 
+	$(srcdir)/../win/tty/wintty.c
+WINTTYOBJ = getline.o termcap.o topl.o wintty.o
 #
 # files for an X11 port
 # (tile.c is included in the defn. for WINCSRC, below)
@@ -741,7 +741,7 @@ monstr.o: monstr.c $(CONFIG_H)
 vis_tab.o: vis_tab.c $(CONFIG_H) ../include/vis_tab.h
 allmain.o: $(srcdir)/allmain.c $(HACK_H) ../include/patchlevel.h
 alloc.o: $(srcdir)/alloc.c $(CONFIG_H)
-apply.o: $(srcdir)/apply.c $(HACK_H) ../include/edog.h 
+apply.o: $(srcdir)/apply.c $(HACK_H) ../include/edog.h
 artifact.o: $(srcdir)/artifact.c $(HACK_H) ../include/artifact.h \
 		../include/artilist.h
 attrib.o: $(srcdir)/attrib.c $(HACK_H)

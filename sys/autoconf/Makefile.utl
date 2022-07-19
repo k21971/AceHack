@@ -97,11 +97,11 @@ CC = @CC@ -DAUTOCONF
 # flags for debugging:
 # CFLAGS = -g -I../include -I$(srcdir)/../include
 
-CFLAGS = -O -I../include -I$(srcdir)/../include @CFLAGS@
+CFLAGS = -g3 -O0 -I../include -I$(srcdir)/../include @CFLAGS@
 LFLAGS = @LFLAGS@
 
 LIBS =
- 
+
 # If you are cross-compiling, you must use this:
 #OBJDIR = .
 # otherwise, you can save a little bit of disk space with this:
@@ -116,7 +116,7 @@ OBJDIR = ../src
 # LEX      = flex
 LEX      = @LEX@
 YACC     = @YACC@
- 
+
 # these are the names of the output files from YACC/LEX. Under MS-DOS
 # and similar systems, they may differ
 YTABC = y.tab.c
