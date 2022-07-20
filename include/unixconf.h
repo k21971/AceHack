@@ -104,6 +104,7 @@
  * system, define VAR_PLAYGROUND to be where the variable parts are kept.
  */
 /* #define VAR_PLAYGROUND "/var/lib/games/nethack" */
+#define VAR_DUMPLOGS "/dgldir/userdata"
 
 
 /*

@@ -22,7 +22,7 @@
 #define FIRST_GEM    DILITHIUM_CRYSTAL
 #define FIRST_AMULET AMULET_OF_ESP
 #define LAST_AMULET  AMULET_OF_YENDOR
- 
+
 struct valuable_data { long count; int typ; };
 
 static struct valuable_data
@@ -926,8 +926,15 @@ long umoney;
 	  Sprintf(qbuf, nh_getenv("DUMPLOG"), plname, (long)u.ubirthday);
 	  dumplogname = qbuf;
 	} else {
+	  int len = sizeof VAR_DUMPLOGS - 1;
+	  Strcat(qbuf, VAR_DUMPLOGS);
+	  if (qbuf[len - 1] != '/') {
+	      qbuf[len] = '/';
+	      qbuf[len + 1] = '\0';
+	  }
 	  set_dumpfile_name();
-	  dumplogname = fqname(DUMPF, DUMPPREFIX, 0);
+	  Strcat(qbuf, DUMPF);
+	  dumplogname = qbuf;
 	}
 
         /* TODO: better dump locations */
