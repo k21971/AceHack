@@ -927,7 +927,7 @@ long umoney;
 	  dumplogname = qbuf;
 	} else {
 	  int len = sizeof VAR_DUMPLOGS - 1;
-	  Strcat(qbuf, VAR_DUMPLOGS);
+	  Strcpy(qbuf, VAR_DUMPLOGS);
 	  if (qbuf[len - 1] != '/') {
 	      qbuf[len] = '/';
 	      qbuf[len + 1] = '\0';

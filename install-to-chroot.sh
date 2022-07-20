@@ -62,7 +62,7 @@ chmod 644 "$NAO_CHROOT/$NHSUBDIR/nhdat"
 
 echo "Creating AceHack variable dir stuff."
 mkdir -p "$NAO_CHROOT/$NHSUBDIR/save"
-mkdir -p "$NAO_CHROOT/$NHSUBDIR/dumps"
+mkdir -p "$NAO_CHROOT/$NHSUBDIR/save/backup"
 touch "$NAO_CHROOT/$NHSUBDIR/logfile"
 touch "$NAO_CHROOT/$NHSUBDIR/perm"
 touch "$NAO_CHROOT/$NHSUBDIR/record"
