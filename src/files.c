@@ -1138,8 +1138,7 @@ set_dumpfile_name()
 				'%', fnamebuf, encodedfnamebuf, BUFSZ);
 	Sprintf(DUMPF, "%s-%lu.AceHack-dumplog", (long)u.ubirthday, encodedfnamebuf);
 #  else
-	Sprintf(DUMPF, "/%c/%s/acehack/dumplog/%lu", *plname, plname, (long)u.ubirthday);
-	regularize(DUMPF+23);	/* avoid . or / in name */
+	Sprintf(DUMPF, "/%c/%s/acehack/dumplog/%lu.ace.txt", *plname, plname, (long)u.ubirthday);
 #  endif /* WIN32 */
 # endif	/* MICRO */
 #endif /* VMS   */
